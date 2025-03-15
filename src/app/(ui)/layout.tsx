@@ -8,7 +8,7 @@ import { AppHeader } from '@/components/app-header';
 
 import '@/styles/globals.css';
 
-import { Providers } from '@/app/providers';
+import { Providers } from '@/app/(ui)/providers';
 
 export const metadata: Metadata = {
   title: siteConfig.title,
