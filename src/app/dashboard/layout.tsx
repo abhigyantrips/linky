@@ -4,6 +4,8 @@ import { siteConfig } from '@/config/site';
 
 import { fontMono, fontSans } from '@/lib/fonts';
 
+import { AppHeader } from '@/components/app-header';
+
 import '@/styles/globals.css';
 
 import { Providers } from '@/app/providers';
@@ -20,8 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
-        <Providers>{children}</Providers>
+      <head />
+      <body
+        className={`${fontSans.variable} ${fontMono.variable} bg-background relative flex min-h-screen flex-col font-sans antialiased`}
+      >
+        <Providers>
+          <AppHeader />
+          <div className="mx-10 flex-1">{children}</div>
+        </Providers>
       </body>
     </html>
   );
