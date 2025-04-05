@@ -1,15 +1,18 @@
 'use client';
 
-import { Button } from '@heroui/react';
-
 import { authClient } from '@/lib/client';
+
+import { Button } from '@/components/ui/button';
 
 export default function LoginPage() {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <Button
-        onPress={async () =>
-          await authClient.signIn.social({ provider: 'google' })
+        onClick={async () =>
+          await authClient.signIn.social({
+            provider: 'google',
+            callbackURL: '/dashboard',
+          })
         }
       >
         Log In

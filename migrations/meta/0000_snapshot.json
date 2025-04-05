@@ -93,12 +93,8 @@
           "name": "account_user_id_user_id_fk",
           "tableFrom": "account",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -151,12 +147,8 @@
           "name": "analytics_shortlinks_id_shortlinks_id_fk",
           "tableFrom": "analytics",
           "tableTo": "shortlinks",
-          "columnsFrom": [
-            "shortlinks_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["shortlinks_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -271,12 +263,8 @@
           "name": "session_user_id_user_id_fk",
           "tableFrom": "session",
           "tableTo": "user",
-          "columnsFrom": [
-            "user_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -286,9 +274,7 @@
         "session_token_unique": {
           "name": "session_token_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "token"
-          ]
+          "columns": ["token"]
         }
       },
       "policies": {},
@@ -366,9 +352,7 @@
         "shortlinks_key_unique": {
           "name": "shortlinks_key_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "key"
-          ]
+          "columns": ["key"]
         }
       },
       "policies": {},
@@ -412,12 +396,8 @@
           "name": "shortlinks_tags_shortlinks_id_shortlinks_id_fk",
           "tableFrom": "shortlinks_tags",
           "tableTo": "shortlinks",
-          "columnsFrom": [
-            "shortlinks_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["shortlinks_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
@@ -425,12 +405,8 @@
           "name": "shortlinks_tags_tags_id_tags_id_fk",
           "tableFrom": "shortlinks_tags",
           "tableTo": "tags",
-          "columnsFrom": [
-            "tags_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["tags_id"],
+          "columnsTo": ["id"],
           "onDelete": "cascade",
           "onUpdate": "no action"
         }
@@ -479,9 +455,7 @@
         "tags_name_unique": {
           "name": "tags_name_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "name"
-          ]
+          "columns": ["name"]
         }
       },
       "policies": {},
@@ -542,9 +516,7 @@
         "user_email_unique": {
           "name": "user_email_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
+          "columns": ["email"]
         }
       },
       "policies": {},
@@ -605,20 +577,12 @@
     "public.access_limit_type": {
       "name": "access_limit_type",
       "schema": "public",
-      "values": [
-        "NONE",
-        "DATETIME",
-        "VISITS"
-      ]
+      "values": ["NONE", "DATETIME", "VISITS"]
     },
     "public.orphan_visit_type": {
       "name": "orphan_visit_type",
       "schema": "public",
-      "values": [
-        "BASE_URL",
-        "INVALID_SHORTLINK",
-        "REGULAR_404"
-      ]
+      "values": ["BASE_URL", "INVALID_SHORTLINK", "REGULAR_404"]
     }
   },
   "schemas": {},

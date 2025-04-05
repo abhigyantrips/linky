@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${fontSans.variable} ${fontMono.variable} bg-background relative flex min-h-screen flex-col font-sans antialiased`}
+        className={`${fontSans.variable} ${fontMono.variable} bg-bg relative flex min-h-screen flex-col font-sans antialiased`}
       >
         <Providers>
           <AppHeader />
