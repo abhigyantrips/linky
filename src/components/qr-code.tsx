@@ -12,12 +12,11 @@ type QRCodeStyle = 'classic' | 'rounded' | 'thin' | 'smooth' | 'circles';
 interface QRCodeData {
   modules: {
     size: number;
-    data: boolean[]; // Use boolean[] here
+    data: boolean[];
   };
   version: number;
   maskPattern: number;
-  errorCorrectionLevel: ErrorCorrectionLevel; // Use the imported enum
-  segments: QRCodeSegment[]; // include the segments data
+  errorCorrectionLevel: ErrorCorrectionLevel;
 }
 
 const generateQRCodeData = async (
@@ -33,14 +32,12 @@ const generateQRCodeData = async (
     const qrCodeData: QRCodeData = {
       modules: {
         size: qrCode.modules.size,
-        data: qrCode.modules.data,
+        data: Array.from(qrCode.modules.data, (v) => !!v),
       },
       version: qrCode.version,
-      maskPattern: qrCode.maskPattern,
-      errorCorrectionLevel: qrCode.errorCorrectionLevel, // Assign directly
-      segments: qrCode.segments,
+      maskPattern: qrCode.maskPattern ?? 0,
+      errorCorrectionLevel: qrCode.errorCorrectionLevel,
     };
-
     return qrCodeData;
   } catch (err) {
     console.error(err);
