@@ -1,7 +1,15 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: 'https://abhi.now',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
